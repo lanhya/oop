@@ -1,0 +1,25 @@
+"use strict";
+exports.__esModule = true;
+var customer_1 = require("./customer");
+var feedback_1 = require("./feedback");
+var product_1 = require("./product");
+var store_1 = require("./store");
+var storeA = new store_1.Store("ProsStore");
+var customerA = new customer_1.Customer("Pros", "Nob");
+var customerB = new customer_1.Customer("Naki", "Se");
+var customerC = new customer_1.Customer("Nak", "Sek");
+var feedbackA = new feedback_1.Feedback("good", 10, customerA);
+var feedbackB = new feedback_1.Feedback("good", 10, customerB);
+var feedbackC = new feedback_1.Feedback("bad", 7, customerC);
+var productA = new product_1.Product("Orange", 1000);
+var productB = new product_1.Product("apple", 1500);
+var productC = new product_1.Product("banana", 800);
+productA.addFeedback([feedbackA]);
+productB.addFeedback([feedbackA, feedbackB]);
+productC.addFeedback([feedbackA, feedbackB, feedbackC]);
+storeA.addProduct([productA, productB, productC]);
+storeA.addCustomer([customerA, customerB, customerC]);
+// console.log(storeA)
+console.log(storeA.getCustomerComments(customerB));
+console.log(storeA.getFeedbackCOntaining("bad"));
+console.log(storeA.getProductLessThan(1100));

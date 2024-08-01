@@ -1,0 +1,24 @@
+class BankAccount{
+    private name: string=""
+    private balance: number=0
+    //Setter mutator
+    setName(newName: string) {
+        this.name=newName
+    }
+    setBalance(amount: number) {
+        this.balance=amount
+    }
+    //getter accessor
+    getName() {
+        return this.name
+    }
+    getBalance() {
+        return this.balance
+    }
+}
+
+let obj = new BankAccount()
+obj.setName("Ronan")
+obj.setBalance(10)
+console.log(obj.getName())
+console.log(obj.getBalance())

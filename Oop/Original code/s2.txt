@@ -1,0 +1,29 @@
+// CHALLENGE 5
+// Create a function to remove duplicated code
+// -------------------------------------------------------------
+let list1 = [1, 5, 9, 8, 7, 6, 8];
+let list1HasEven = false;
+for (let n of list1) {
+  if (n % 2 == 0) {
+    list1HasEven = true;
+  }
+}
+console.log(list1HasEven ? "list1 has even numbers" : "list1 has NO even numbers");
+
+let list2 = [2, 5, 8, 4, 9, 10];
+let list2HasEven = false;
+for (let n of list2) {
+  if (n % 2 == 0) {
+    list2HasEven = true;
+  }
+}
+console.log(list2HasEven ? "list2 has even numbers" : "list2 has NO even numbers");
+
+let list3 = [1, 5, 9, 8, 7, 6, 8];
+let list3HasEven = false;
+for (let n of list3) {
+  if (n % 2 == 0) {
+    list3HasEven = true;
+  }
+}
+console.log(list3HasEven ? "list3 has even numbers" : "list3 has NO even numbers");

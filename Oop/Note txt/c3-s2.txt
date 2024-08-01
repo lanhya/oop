@@ -1,0 +1,6 @@
+1. Person
+	name: string
+	yearOfBirth: number 
+both is private
+	getName(): string
+	getYearOfBirth(): number
